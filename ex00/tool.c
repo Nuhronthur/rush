@@ -6,7 +6,7 @@
 /*   By: jonvella <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 13:20:05 by jonvella          #+#    #+#             */
-/*   Updated: 2022/02/05 16:47:17 by jonvella         ###   ########.fr       */
+/*   Updated: 2022/02/05 17:58:08 by jonvella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,3 +54,31 @@ char **putmalloc(char **str)
 	}
 	return (str);
 }
+
+char	**putpar(char **dest, char *src)
+{
+	int i;
+	int j;
+	int k;
+
+	i = 0;
+	j = 0;
+	k = 0;
+	while (i < 4)
+	{
+		if (k % 4 == i)
+		{
+			dest[i][j] = src[k];
+			j++;
+		}
+		k++;
+		if (src[k] == '\0')
+		{
+			i++;
+			j = 0;
+			k = 0;
+		}
+	}
+	return (dest);
+}
+
