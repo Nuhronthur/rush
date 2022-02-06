@@ -6,11 +6,15 @@
 /*   By: jonvella <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 13:20:05 by jonvella          #+#    #+#             */
-/*   Updated: 2022/02/06 15:48:18 by jonvella         ###   ########.fr       */
+/*   Updated: 2022/02/06 19:17:25 by jonvella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include <unistd.h>
 #include <stdlib.h>
+
+int ft_checkrow(char k, char *str);
+int	ft_checkcol(char k, char **str, int nb);
 char	*setuppar(char *dest, char *src)
 {
 	int i;
@@ -86,4 +90,7 @@ int	verif(char *str, int i)
 	return(1);
 }
 
+void solve(char **tabpar, char **tabres)
+{
 
+}

@@ -14,8 +14,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_checkrow(int k, char *str)
+int	ft_checkrow(char k, char *str)
 {
+	int i;
+
+	i = 0;
 	while (i < 4)
 	{
 		if (str[i] == k)
@@ -25,9 +28,11 @@ int	ft_checkrow(int k, char *str)
 	return (1);
 }
 
-int	ft_checkcol(int k, char **str, int nb)
+int	ft_checkcol(char k, char **str, int nb)
 {
-	nb = i;
+	int j;
+
+	j = 0;
 	while (j < 4)
 	{
 		if (str[j][nb] == k)
@@ -42,17 +47,20 @@ ft_backtracking(char *str[i])
 	int		j;
 	int		l;
 	int		v;
+	char	*k;
 	
-	k[] = {'1', '2', '3', '4'};
-	i = 0;
+	k = malloc(sizeof(char) * 5);
+	l = -1;
+	while (l++ < 4)
+		k[l] = l + '1';
+	l = 0;
 	j = 0;
-	v = 1;
 	while (i < 4 || j < 4)
 	{
 		l = 0;
 		while (l < 4)
 		{
-			if (v ! (ft_checkrow(k, &str[i])) || v ! (ft_checkcol(k, &str[j][i], nb)))
+			if (!(ft_checkrow(k[l], &str[i])) ||  !(ft_checkcol(k[l], &str[j][i], nb)))
 				l++;	
 			write(1, &k[l], 1);
 			l++;
