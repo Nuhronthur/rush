@@ -6,7 +6,7 @@
 /*   By: jonvella <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 13:20:05 by jonvella          #+#    #+#             */
-/*   Updated: 2022/02/05 17:58:08 by jonvella         ###   ########.fr       */
+/*   Updated: 2022/02/06 08:58:29 by jonvella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,20 +64,16 @@ char	**putpar(char **dest, char *src)
 	i = 0;
 	j = 0;
 	k = 0;
-	while (i < 4)
+	while ( k >= 16)
 	{
-		if (k % 4 == i)
+		if (i >= 3)
 		{
-			dest[i][j] = src[k];
+			i = 0;
 			j++;
 		}
+		dest[i][j] = src[k];
 		k++;
-		if (src[k] == '\0')
-		{
-			i++;
-			j = 0;
-			k = 0;
-		}
+		i++;
 	}
 	return (dest);
 }

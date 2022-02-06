@@ -6,7 +6,7 @@
 /*   By: jonvella <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 13:05:55 by jonvella          #+#    #+#             */
-/*   Updated: 2022/02/05 18:17:07 by jonvella         ###   ########.fr       */
+/*   Updated: 2022/02/06 08:46:18 by jonvella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -19,7 +19,7 @@ int main(int ac, char **av)
 	char	*par;
 	char	**tabpar;
 	
-	tabpar[0][0] = par[0];
+	tabpar = NULL;
 	par = malloc(sizeof(char *) * 17);
 	par[16] = '\0';
 	setuppar(par, av[1]);
@@ -32,6 +32,7 @@ int main(int ac, char **av)
 		return(0);
 	}
 	putmalloc(tabpar);
+	tabpar[0][0] = par[0];
 	putpar(tabpar, par);
 	printf("%s\n", par);
 	
