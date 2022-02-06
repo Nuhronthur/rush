@@ -6,43 +6,59 @@
 /*   By: knerini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 14:28:53 by knerini           #+#    #+#             */
-/*   Updated: 2022/02/05 17:59:00 by knerini          ###   ########.fr       */
+/*   Updated: 2022/02/06 16:17:48 by knerini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char  **putpar(char **dest, char *src)
-{
-	int i;
-	int j;
-	int k;
+//ft_correct(char *str[i])
 
-	while (src[i] != '\0')
+int	ft_checkrow(int k, char *str)
+{
+	while (i < 4)
 	{
-		k = 0;
-		while (dest[j][k] != '\0')
+		if (str[i] == k)
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+int	ft_checkcol(int k, char **str, int nb)
+{
+	nb = i;
+	while (j < 4)
+	{
+		if (str[j][nb] == k)
+			return (0);
+		j++;
+	}
+	return (1);
+}
+
+ft_backtracking(char *str[i])
+{
+	int		j;
+	int		l;
+	int		v;
+	
+	k[] = {'1', '2', '3', '4'};
+	i = 0;
+	j = 0;
+	v = 1;
+	while (i < 4 || j < 4)
+	{
+		l = 0;
+		while (l < 4)
 		{
-			j = i % 4;
-			if (j == 0)
-			{	
-				dest[j][k] = scr[i];
-				i++;
-			}
-			if (j == 1)
-			{
-				dest[j][k] = src[i];
-				i++;
-			}
-			if (j == 2)
-			{
-				dest[j][k] = scr[i];
-				i++;
-			}
-			if (j == 3)
-			{
-				dest[j][k] = src[i];
-				i++;
-				k++;
-			}
+			if (v ! (ft_checkrow(k, &str[i])) || v ! (ft_checkcol(k, &str[j][i], nb)))
+				l++;	
+			write(1, &k[l], 1);
+			l++;
+			i++;
 		}
+		i = 0;
+		j++;
+		if (j == 4)
+			j = 0;
 	}
 }
