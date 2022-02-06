@@ -6,7 +6,7 @@
 /*   By: jonvella <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 13:05:55 by jonvella          #+#    #+#             */
-/*   Updated: 2022/02/06 15:46:08 by jonvella         ###   ########.fr       */
+/*   Updated: 2022/02/06 17:33:59 by jonvella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdio.h>
@@ -20,6 +20,7 @@ int main(int ac, char **av)
 {
 	char	*par;
 	char	**tabpar;
+	char	**tabres;
 	int i;
 
 
@@ -29,6 +30,7 @@ int main(int ac, char **av)
 			return(0);
 		}
 	tabpar = putmalloc(tabpar);
+	tabres = putmalloc(tabres);
 	par = malloc(sizeof(char) * 17);
 	par[16] = '\0';
 	setuppar(par, av[1]);
@@ -37,6 +39,8 @@ int main(int ac, char **av)
 	while(i < 4)
 	{	
 		putstr(tabpar[i]);
+		putchar('\n');
 		i++;
 	}
+	return(0);
 }
