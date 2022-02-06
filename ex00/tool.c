@@ -6,10 +6,10 @@
 /*   By: jonvella <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 13:20:05 by jonvella          #+#    #+#             */
-/*   Updated: 2022/02/06 08:58:29 by jonvella         ###   ########.fr       */
+/*   Updated: 2022/02/06 15:48:18 by jonvella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+#include <unistd.h>
 #include <stdlib.h>
 char	*setuppar(char *dest, char *src)
 {
@@ -60,13 +60,12 @@ char	**putpar(char **dest, char *src)
 	int i;
 	int j;
 	int k;
-
 	i = 0;
 	j = 0;
 	k = 0;
-	while ( k >= 16)
+	while ( k <= 16)
 	{
-		if (i >= 3)
+		if (i >= 4)
 		{
 			i = 0;
 			j++;
@@ -77,4 +76,14 @@ char	**putpar(char **dest, char *src)
 	}
 	return (dest);
 }
+
+int	verif(char *str, int i)
+{
+	if (i != 2)
+		return(0);
+	if (!(str))
+		return(0);
+	return(1);
+}
+
 
