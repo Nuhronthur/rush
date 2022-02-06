@@ -14,8 +14,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//ft_correct(char *str[i])
-
 int	ft_checkrow(int k, char *str)
 {
 	while (i < 4)
@@ -66,7 +64,3 @@ ft_backtracking(char *str[i])
 			j = 0;
 	}
 }
-
-ft_cont(char *str[i])
-{
-	
